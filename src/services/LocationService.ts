@@ -14,19 +14,19 @@ export const fetchLocations = async (): Promise<Location[]> => {
     if (Array.isArray(response.data)) {
       return response.data;
     } else {
-      throw new Error('Invalid data format received');
+      throw new Error('Formato de datos recibido no válido');
     }
   } catch (error: unknown) {
     if (axios.isAxiosError(error)) {
       if (error.response) {
-        throw new Error(error.response.data.error || 'Error fetching locations');
+        throw new Error(error.response.data.error || 'Error al obtener ubicaciones');
       } else if (error.request) {
-        throw new Error('No response received from server');
+        throw new Error('No se recibió respuesta del servidor');
       } else {
-        throw new Error('Error setting up request');
+        throw new Error('Error al configurar la solicitud');
       }
     } else {
-      throw new Error('An unknown error occurred');
+      throw new Error('Se produjo un error desconocido');
     }
   }
 };
