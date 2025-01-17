@@ -11,7 +11,7 @@ Este proyecto es una aplicación de React que consume un endpoint llamado `locat
 
 ### 1. Clonar el Repositorio
 ```bash
-git clone https://github.com/Ariaz39/frontend_joonik.git
+git clone --branch develop --single-branch https://github.com/Ariaz39/frontend_joonik.git
 ```
 ### 2. Ingresar a la Carpeta del Proyecto
 ```bash
